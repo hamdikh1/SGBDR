@@ -1,0 +1,91 @@
+MySQL
+MySQL (prononcer [maj.ɛs.ky.ɛl]) est un système de gestion de bases de données relationnelles (SGBDR). Il est distribué sous une double licence GPL et propriétaire. Il fait partie des logiciels de gestion de base de données les plus utilisés au monde3, autant par le grand public (applications web principalement) que par des professionnels, en concurrence avec Oracle, PostgreSQL et Microsoft SQL Server.
+
+Son nom vient du prénom de la fille du cocréateur Michael Widenius, My (sv) (prononcer [my]). SQL fait référence au Structured Query Language, le langage de requête utilisé.
+
+MySQL AB a été acheté le 16 janvier 2008 par Sun Microsystems pour un milliard de dollars américains4. En 2009, Sun Microsystems a été acquis par Oracle Corporation, mettant entre les mains d'une même société les deux produits concurrents que sont Oracle Database et MySQL. Ce rachat a été autorisé par la Commission européenne le 21 janvier 20105,6.
+
+Depuis mai 2009, son créateur Michael Widenius a créé MariaDB (Maria est le prénom de sa deuxième fille) pour continuer son développement en tant que projet Open Source.
+
+
+Fonctionnalités
+Deux moteurs principaux sont présents dans MySQL : MyISAM et InnoDB.
+
+MyISAM, contrairement à InnoDB, ne supporte ni transactions ni intégrité automatique des tables, il n'est pas destiné aux applications dont la cohérence des données est critique ; cependant, ses performances le font adopter pour des applications ayant besoin d'une base de données simple et peu onéreuse à mettre en œuvre.
+
+Pour les utilisateurs, phpMyAdmin est un outil web souvent disponible pour créer, remplir et utiliser des bases MySQL.
+
+PostgreSQL
+
+PostgreSQL est un système de gestion de base de données relationnelle et objet (SGBDRO). C'est un outil libre disponible selon les termes d'une licence de type BSD.
+
+Ce système est concurrent d'autres systèmes de gestion de base de données, qu'ils soient libres (comme MariaDB et Firebird), ou propriétaires (comme Oracle, MySQL, Sybase, DB2, Informix et Microsoft SQL Server). Comme les projets libres Apache et Linux, PostgreSQL n'est pas contrôlé par une seule entreprise, mais est fondé sur une communauté mondiale de développeurs et d'entreprises.
+
+Les multiples fonctionnalités de PostgreSQL permettent aux développeurs de créer des applications plus facilement, et aident les administrateurs à développer des environnements tolérants aux erreurs en protégeant l’intégrité des données.
+
+Ses principales caractéristiques sont une orientation objet et une haute disponibilité. On peut aussi citer sa compatibilité avec de multiples plateformes, langages de programmation et middlewares.
+
+Ses fonctionnalités de programmation server-side le démarquent aussi, au même titre que sa prise en charge des architectures réseau client-serveur et sa compliance avec le standard ANSI SQL ainsi que sa compatibilité ANSI-SQL2008. Citons aussi sa fonctionnalité de réplication SSL basée log ou trigger. En outre, la prise en charge de JSON permet le linking vers d’autres Data Stores comme NoSQL.
+
+
+Microsoft SQL Server
+
+Version actuelle : 2019
+Disponibilité : Windows (versions spécifiques selon type de Windows), Linux
+Licence : commerciale, shared source dans sa version Express (avec obligation de s'enregistrer), Compact ou MSDE
+Autre contributeur : SQLPro
+
+Les avantages et inconvénients portent sur les 3 versions citées, compte tenu que techniquement, MSDE et SQL Server 2005 Express se basent sur un noyau Microsoft SQL Server bridé.
+
+Avantages
+Administration aisée
+Fonction d'audit évolué
+Indépendance entre les diverses bases, facilitant l'intégration de plusieurs applicatifs dans une même instance
+Une des bases les plus performantes sous Windows en configuration par défaut
+Optimiseur statistique enrichi à flux tendu
+Réplication intégrée (sauf pour MSDE)
+Frontaux et assistants très poussés (sauf pour MSDE)
+Langage T-SQL très convivial, intégration de CLR
+Sous-SELECT possible dans clause FROM
+Gestion de l'indexation textuelle
+Niveau de SQL très près de la norme SQL et implémente presque toutes les possibilités de SQL.
+Services Web
+Support XML
+Ordonnanceur intégré
+Supporte les 4 niveaux d'isolation transactionnelle de la norme SQL
+Compression des données et des sauvegardes
+Warm-Standby et haute disponibilité (AlwaysOn) via log shipping
+Inconvénients
+Depuis la version 2005, plus de prise directe sur les tables système (remplacées par de vues système)
+Pas de prise en charge du LDAP
+Toujours pas de vrai cluster (hormis en actif-passif, en se basant sur le cluster OS)
+Pas certifié SQLJ, pas d'intégration Java, orientation C#
+Pas de contraintes d'unicité multi null
+Pas d'implémentation totale du Row Value Constructor
+
+Version actuelle : 12.2
+Disponibilité : Linux, Unix, MacOSX, Windows Docker
+Licence : BSD et commerciale (sous nom de EnterpriseDB Advanced Server 8.1)
+
+Avantages
+OpenSource et gratuit
+Son extension PostGIS en fait un acteur clé du marché des environnements nécessitant du Spatial
+Fiable et relativement performant, tout en restant simple d'utilisation
+Supporte la majorité du standard SQL-92 et possède en plus un certain nombre d'extensions (Java, Ruby, PL-SQL).
+Très riche fonctionnellement, notions d'héritage de tables, multitude de modules
+Peut travailler en pool de connexions (cf pgpool)
+Simple d'utilisation et d'administration
+Héritage de tables
+Warm-Standby via log shipping
+Inconvénients
+Pas possible de requêter sur plusieurs bases à la fois : chaque base nécessite sa connexion
+Sauvegardes peu évoluées
+Pas d'update in-place (=> génération de beaucoup de Wal et vacuums nécessaires)
+Pas de partage de plan d'exécution entre les sessions
+Supporte les bases de moyenne importance
+Pas de services Web
+Pas d'ordonnanceur intégré
+Pas de fonctions d'agrégat OLAP
+Pas de requêtes récursives
+Solutions de réplication pas encore totalement packagées
+Solution en cluster pas finalisée (abandon de PgCluster, développement en cours de PgCluster2)
